@@ -1,55 +1,371 @@
+# Agência Mundos Digitais — Layout Vibrante Artístico (Cores Frias)
+
+Este repositório contém a versão **vibrante-artística** do site da **Agência Mundos Digitais**, com **fontes maiores**, **layout mais agradável** e foco nas três frentes principais: **Escola de Criação de Títulos**, **Estúdio de Vídeo‑Marketing e Info‑produtos** e **Marketing Digital**. O tema usa cores frias (azul, violeta, verde‑água) e tipografia com maior escala para leitura e impacto visual.
+
+---
+
+## Estrutura do projeto
+
+```
+mundos-digitais/
+├── index.html
+├── README.md
+├── LICENSE
+├── .gitignore
+├── Assets/
+│   ├── CSS/
+│   │   └── style.css
+│   ├── Imagens/
+│   │   ├── logo_circular.png
+│   │   └── banner-hero.jpg
+│   └── JS/
+│       └── main.js
+└── docs/
+    └── index.html
+```
+
+---
+
+## index.html (pronto para copiar/colar)
+
+```html
 <!doctype html>
-<button id="menu-toggle" aria-label="Abrir menu">☰</button>
-</div>
-</header>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agência Mundos Digitais — Escola e Estúdio Criativo</title>
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
-<main>
-<section id="hero" class="hero">
-<div class="container">
-<h1>Agência Mundos Digitais</h1>
-<p>Estúdio de produção criativa em tecnologia, educação e arte — mantenedora da Oficina de Talentos.</p>
-<a class="cta" href="#contato">Fale conosco</a>
-</div>
-</section>
+  <link rel="stylesheet" href="Assets/CSS/style.css">
+  <meta name="description" content="Agência Mundos Digitais — Escola de Criação de Títulos, Estúdio de Vídeo-Marketing e Info-produtos, Marketing Digital">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <img src="Assets/Imagens/logo_circular.png" alt="Mundos Digitais" class="logo" onerror="this.style.display='none'">
+        <div class="brand-text">
+          <span class="brand-title">Mundos Digitais</span>
+          <span class="brand-sub">Estúdio criativo • Oficina de Talentos</span>
+        </div>
+      </a>
 
+      <nav class="nav" id="main-nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#oferta">O que fazemos</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato" class="btn-primary">Contato</a>
+      </nav>
 
-<section id="sobre" class="container content">
-<h2>Sobre</h2>
-<p>A Agência Mundos Digitais é um estúdio interdisciplinar que integra tecnologia, arte e educação para o desenvolvimento de projetos de impacto social e cultural.</p>
-</section>
+      <button id="menu-toggle" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
 
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1 class="hero-title">Agência <span>Mundos Digitais</span></h1>
+          <p class="hero-sub">Escola de Criação de Títulos · Estúdio de Vídeo‑Marketing e Info‑produtos · Marketing Digital</p>
 
-<section id="servicos" class="container content">
-<h2>Serviços</h2>
-<ul>
-<li>Produção audiovisual e transmídia</li>
-<li>Desenvolvimento de projetos educativos</li>
-<li>Consultoria em arte, cultura e tecnologia</li>
-<li>Formação e oficinas (Oficina de Talentos)</li>
-</ul>
-</section>
+          <p class="hero-cta">Unimos criatividade, técnica e estratégia para transformar ideias em projetos audiovisuais e produtos digitais impactantes.</p>
 
+          <div class="hero-actions">
+            <a href="#oferta" class="btn-cta">Conheça nossa oferta</a>
+            <a href="#contato" class="btn-ghost">Agendar conversa</a>
+          </div>
+        </div>
 
-<section id="projetos" class="container content">
-<h2>Projetos</h2>
-<p>Conheça os principais projetos desenvolvidos pela Agência Mundos Digitais e pela Oficina de Talentos, envolvendo arte interativa, residências criativas e tecnologia social.</p>
-</section>
+        <div class="hero-right">
+          <!-- área visual com cartão promocional -->
+          <div class="card-glass">
+            <h3>Oficina de Talentos</h3>
+            <p>Programa contínuo de formação — práticas de criação, roteiro, edição, motion e distribuição.</p>
+            <a href="#projetos" class="card-link">Explorar projetos →</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section id="oferta" class="container oferta">
+      <h2 class="section-title">Nossa oferta</h2>
+      <div class="grid services">
+        <article class="service">
+          <div class="service-icon">🎓</div>
+          <h3>Escola de Criação de Títulos</h3>
+          <p>Aulas práticas para criação de títulos, identidade visual e storytelling aplicado a vídeo e projetos editoriais.</p>
+        </article>
 
-<section id="contato" class="container content">
-<h2>Contato</h2>
-<p>Email: <a href="mailto:contato@mundosdigitais.org">contato@mundosdigitais.org</a></p>
-<p>Instagram: <a href="https://instagram.com/mundosdigitais" target="_blank">@mundosdigitais</a></p>
-</section>
-</main>
+        <article class="service">
+          <div class="service-icon">🎥</div>
+          <h3>Estúdio de Vídeo‑Marketing & Info‑produtos</h3>
+          <p>Produção end‑to‑end: roteiro, filmagem, edição, motion e lançamento de infoprodutos.</p>
+        </article>
 
+        <article class="service">
+          <div class="service-icon">📈</div>
+          <h3>Marketing Digital</h3>
+          <p>Estratégia de conteúdo, tráfego e funis para amplificar alcance e monetizar projetos criativos.</p>
+        </article>
+      </div>
+    </section>
 
-<footer class="site-footer">
-<div class="container">© 2025 Agência Mundos Digitais — Oficina de Talentos</div>
-</footer>
+    <section id="projetos" class="container projetos">
+      <h2 class="section-title">Projetos em destaque</h2>
+      <div class="grid project-list">
+        <div class="project">
+          <div class="project-thumb">📺</div>
+          <h4>Vitrine Educativa</h4>
+          <p>Sequência de micro‑aulas e trailer para lançamento de curso online.</p>
+        </div>
 
+        <div class="project">
+          <div class="project-thumb">🌐</div>
+          <h4>Campanha Interativa</h4>
+          <p>Série de vídeos e materiais digitais para campanha de impacto social.</p>
+        </div>
 
-<script src="Assets/JS/main.js"></script>
+        <div class="project">
+          <div class="project-thumb">🎬</div>
+          <h4>Product Launch</h4>
+          <p>Estúdio e estratégia para lançamento de info‑produto com tráfego pago e orgânico.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="container sobre">
+      <h2 class="section-title">Sobre nós</h2>
+      <p class="lead">A Agência Mundos Digitais é um estúdio de criação e um espaço de formação que combina arte, tecnologia e metodologias aplicadas para capacitar criadores e instituições. Nossa Oficina de Talentos apoia iniciativas desde protótipos até lançamentos comerciais.</p>
+
+      <div class="values">
+        <div>
+          <strong>Metodologias ativas</strong>
+          <p>Aprender fazendo, com projetos reais e mentoria contínua.</p>
+        </div>
+        <div>
+          <strong>Integração técnica</strong>
+          <p>Produção audiovisual, motion design e marketing digital integrados.</p>
+        </div>
+        <div>
+          <strong>Impacto criativo</strong>
+          <p>Foco em cultura, educação e inovação social.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="container contato">
+      <h2 class="section-title">Vamos conversar?</h2>
+      <p>Escreva para nós e conte sobre seu projeto.</p>
+
+      <form id="contact-form" class="contact-form">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e‑mail" required>
+        <textarea name="mensagem" rows="4" placeholder="Conte sobre seu projeto" required></textarea>
+        <button type="submit" class="btn-cta">Enviar mensagem</button>
+      </form>
+
+      <p class="micro">Email: <a href="mailto:contato@mundosdigitais.org">contato@mundosdigitais.org</a> • Instagram: <a href="https://instagram.com/mundosdigitais" target="_blank">@mundosdigitais</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">© 2025 Agência Mundos Digitais — Oficina de Talentos</div>
+  </footer>
+
+  <script src="Assets/JS/main.js"></script>
 </body>
 </html>
+```
+
+---
+
+## Assets/CSS/style.css (pronto para copiar/colar)
+
+```css
+/* Palette fria: violeta, azul, verde-água */
+:root{
+  --bg: linear-gradient(180deg, #051025 0%, #07132a 50%, #071428 100%);
+  --card: rgba(255,255,255,0.04);
+  --glass: rgba(255,255,255,0.03);
+  --muted: #b6c3d9;
+  --accent1: #6ee7ff; /* aqua */
+  --accent2: #8b5cf6; /* violeta */
+  --accent3: #4fd1c5; /* verde-água */
+  --text: #eaf6ff;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+.container{max-width:1100px;margin:0 auto;padding:2rem}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:60;padding:0.8rem 0;background:linear-gradient(180deg, rgba(7,19,40,0.4), rgba(7,16,34,0.6));backdrop-filter:blur(6px)}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;text-decoration:none;color:var(--text)}
+.logo{width:56px;height:56px;border-radius:50%;object-fit:cover;margin-right:0.9rem}
+.brand-text{display:flex;flex-direction:column}
+.brand-title{font-weight:800;font-size:1.15rem;letter-spacing:0.3px}
+.brand-sub{font-size:0.8rem;color:var(--muted)}
+
+.nav{display:flex;align-items:center;gap:1rem}
+.nav a{color:var(--text);text-decoration:none;font-weight:600;padding:0.4rem 0.6rem;border-radius:8px}
+.nav a:hover{background:rgba(255,255,255,0.03)}
+
+#menu-toggle{display:none;background:none;border:none;color:var(--accent1);font-size:1.6rem}
+
+/* Hero */
+.hero{position:relative;padding:6rem 0 4rem;overflow:visible}
+.hero-overlay{position:absolute;inset:0;background:radial-gradient(600px 300px at 10% 20%, rgba(139,92,246,0.12), transparent 20%), radial-gradient(500px 250px at 90% 80%, rgba(110,231,255,0.08), transparent 20%);pointer-events:none}
+.hero-inner{display:flex;gap:2rem;align-items:center}
+.hero-left{flex:1}
+.hero-right{flex:0 0 360px;display:flex;justify-content:flex-end}
+
+.hero-title{font-family:'Playfair Display', serif;font-size:3.2rem;margin:0 0 0.4rem;line-height:1}
+.hero-title span{background:linear-gradient(90deg,var(--accent2),var(--accent1));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.hero-sub{font-size:1.05rem;margin:0 0 1rem;color:var(--muted);font-weight:600}
+.hero-cta{font-size:1.05rem;margin-bottom:1rem;color:var(--text);max-width:640px}
+
+.hero-actions{display:flex;gap:0.8rem;align-items:center}
+.btn-cta{background:linear-gradient(90deg,var(--accent2),var(--accent1));color:#02111a;padding:0.9rem 1.1rem;border-radius:12px;text-decoration:none;font-weight:700}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:0.9rem 1.1rem;border-radius:12px;color:var(--text);text-decoration:none}
+
+.card-glass{width:320px;padding:1.4rem;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 8px 30px rgba(4,10,20,0.6);backdrop-filter:blur(10px)}
+.card-glass h3{margin:0 0 0.4rem;font-size:1.1rem;color:var(--accent2)}
+.card-link{font-weight:700;color:var(--accent1);text-decoration:none}
+
+/* Sections */
+.section-title{font-size:1.6rem;margin:0 0 1rem;color:var(--accent1)}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.service{background:var(--card);padding:1.4rem;border-radius:12px}
+.service-icon{font-size:1.8rem;margin-bottom:0.6rem}
+.service h3{margin:0 0 0.6rem;font-size:1.05rem}
+.service p{color:var(--muted);margin:0}
+
+.project-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.project{background:var(--card);padding:1rem;border-radius:12px}
+.project-thumb{font-size:2rem}
+.project h4{margin:0.6rem 0 0.4rem}
+
+.sobre .lead{font-size:1.05rem;color:var(--muted);max-width:900px}
+.values{display:flex;gap:1.2rem;margin-top:1rem}
+.values div{background:var(--card);padding:1rem;border-radius:10px;flex:1}
+.values strong{display:block;margin-bottom:0.4rem}
+
+/* Contato */
+.contact-form{display:flex;flex-direction:column;gap:0.8rem;max-width:640px}
+.contact-form input,.contact-form textarea{padding:0.9rem;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:rgba(255,255,255,0.35)}
+
+.micro{color:var(--muted);margin-top:0.8rem}
+
+/* Footer */
+.site-footer{padding:2rem 0;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
+
+/* Responsive */
+@media(max-width:900px){
+  .hero-inner{flex-direction:column-reverse}
+  .hero-right{width:100%;justify-content:center;margin-bottom:1rem}
+  .services{grid-template-columns:1fr}
+  .project-list{grid-template-columns:1fr}
+  .values{flex-direction:column}
+}
+
+@media(max-width:700px){
+  #menu-toggle{display:inline-block}
+  .nav{display:none}
+  .nav.active{display:flex;flex-direction:column;position:absolute;right:12px;top:72px;background:rgba(10,14,22,0.6);padding:1rem;border-radius:10px}
+  .brand-title{font-size:1rem}
+  .hero-title{font-size:2.4rem}
+}
+
+/* Larger typography overall for accessibility */
+html{font-size:18px}
+```
+
+---
+
+## Assets/JS/main.js
+
+```js
+// Menu toggle
+const toggle = document.getElementById('menu-toggle');
+const nav = document.getElementById('main-nav');
+if (toggle){
+  toggle.addEventListener('click', ()=> nav.classList.toggle('active'));
+}
+
+// Smooth scroll for internal links
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    const href = a.getAttribute('href');
+    if(href.length>1){
+      e.preventDefault();
+      const el = document.querySelector(href);
+      if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  })
+});
+
+// Simple contact form handler (local only)
+const form = document.getElementById('contact-form');
+if(form){
+  form.addEventListener('submit', e=>{
+    e.preventDefault();
+    const data = new FormData(form);
+    // Apenas simulação local: mostrar alerta
+    alert('Mensagem enviada! Obrigado, ' + (data.get('nome') || 'voc\u00ea') + '. Iremos responder em breve.');
+    form.reset();
+  })
+}
+```
+
+---
+
+## README.md (atualizado)
+
+```markdown
+# Agência Mundos Digitais
+
+Site: versão **Vibrante Artístico** (paleta fria) — fontes maiores e layout acessível.
+
+## Linhas de atuação
+
+- **Escola de Criação de Títulos**
+- **Estúdio de Vídeo‑Marketing e Info‑produtos**
+- **Marketing Digital**
+
+## Como usar
+
+1. Crie a estrutura de pastas.
+2. Copie cada bloco de código nos respectivos arquivos.
+3. Suba para o GitHub e publique como GitHub Pages (Settings → Pages → branch `main`).
+
+## Personalizações rápidas
+
+- Substitua `Assets/Imagens/logo_circular.png` e `banner-hero.jpg` por seus próprios arquivos.
+- Ajuste as cores no `:root` do `style.css` para corresponder à identidade visual.
+- Conecte o formulário a um serviço de backend ou a um serviço de formulários (Formspree, Netlify Forms etc.).
+
+---
+
+© 2025 Agência Mundos Digitais — Oficina de Talentos
+```
+
+---
+
+Se quiser, eu atualizo também os arquivos adicionais (`LICENSE`, `.gitignore`, `docs/index.html`) para combinar com essa versão. Posso também gerar um **arquivo .zip** com tudo pronto para download — quer que eu gere o .zip agora? If yes, I will create it.
